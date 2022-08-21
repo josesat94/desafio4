@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    background-image: linear-gradient(to left, rgb(50, 50, 89), rgb(192, 192, 192));
+}
+
 .titulos{
     width: 100vw;
     height: 20vh;
@@ -16,8 +20,23 @@
     align-items: center;
 }
 
+h1{
+    transform: translate(0px, 5px);
+    transform: rotate(355deg);
+    padding: 10px;
+    border: solid bisque;
+    border-radius: 5px;
+}
+
+h2{
+    color: cadetblue;
+    font-size: 30px;
+    padding-top: 20px;
+}
+
 .buttonContainer{
     width: 100vw;
+    height: 15vh;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -35,11 +54,21 @@ button{
     align-content: center;
     flex-wrap: nowrap;
     flex-direction: row;
+    background-color: darkblue;
+    color: aliceblue;
+    border-radius: 10px;
+}
+
+button:hover{
+    color: cornflowerblue;
+    font-weight: bold;
+    transition: 0.3s;
+    transform: scale(2);
 }
 
 .imgContainer{
     width: 100vw;
-    height: 20vh;
+    height: 35vh;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -58,6 +87,39 @@ img{
     align-items: center;
 }
 
+img:hover{
+    transform: scale(1.4);
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+input{
+    width: 250px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+input:focus{
+    border-radius: 10%;
+    background-color: blanchedalmond;
+    color: blueviolet;
+    transition: 0.3s;
+}
+
+
 footer{
     width: 100vw;
     height: 20vh;
@@ -67,4 +129,37 @@ footer{
     align-content: center;
     justify-content: center;
     align-items: center;
+}
+
+footer:hover{
+    transform: scale(2);
+    color: aliceblue;
+    transition: 0.3s;
+}
+
+
+h3{
+    color: beige;
+    animation-name: titulo;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes titulo {
+    0%{
+        color: aquamarine;
+        font-size: 25px;
+    }
+    25% {
+        color: rgb(122, 33, 92);
+        text-decoration: dashed;
+    }
+    75%{
+        color: burlywood;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    100%{
+        color: chartreuse;
+        font-size: 18px;
+    }
 }
